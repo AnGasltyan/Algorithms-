@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static bool IsPalindrome(string input)
+    {
+        for (int start = 0; start < input.Length / 2; start++)
+        {
+            int end = input.Length - 1 - start;
+            if (input[start] != input[end])
+                return false;
+        }
+        return true;
+    }
+
+    static void Main()
+    {
+        string word = "racecar";
+        bool isPalindrome = IsPalindrome(word);
+        Console.WriteLine(isPalindrome);
+    }
+}
